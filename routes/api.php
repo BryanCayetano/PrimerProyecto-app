@@ -18,7 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::post('register', [UserController::class, 'register']);
 Route::post('login', [UserController::class, 'login']);
 Route::post('insert-product', [ProductController::class, 'insert']);
-Route::post('insert-category', [crud_category_controller::class, 'insert_category']);
+Route::post('delete-product', [ProductController::class, 'delete']);
+Route::post('insert-category', [crud_category_controller::class, 'insert']);
+Route::post('delete-category', [crud_category_controller::class, 'delete']);
 
 
 Route::group( ['middleware' => ["auth:sanctum"]], function(){

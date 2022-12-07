@@ -31,4 +31,14 @@ class ProductController extends Controller
 
     }
 
+
+    public function delete(Request $request){
+        $product = new Product();
+        $product->id = $request->id;
+        if ($product = Product::find($product)){
+
+            Request::delete();
+        }
+    }
+
 }

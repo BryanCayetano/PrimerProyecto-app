@@ -26,4 +26,13 @@ class crud_category_controller extends Controller
         ]);
 
     }
+
+    public function delete(Request $request){
+        $Category = new Category();
+        $Category->name = $request->name;
+        if ($product = Category::find($Category)){
+
+            Request::delete();
+        }
+    }
 }
